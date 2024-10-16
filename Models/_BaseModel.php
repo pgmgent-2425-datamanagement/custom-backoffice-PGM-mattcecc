@@ -1,6 +1,8 @@
 <?php
 namespace App\Models;
 
+#[\AllowDynamicProperties]
+
 class BaseModel {
 
     protected $table;
@@ -98,7 +100,8 @@ class BaseModel {
     }
 
     private function getClassName($classname) {
-        return (substr($classname, strrpos($classname, '\\') + 1));
+        return $classname;
+        //return (substr($classname, strrpos($classname, '\\') + 1));
     }
     
 

@@ -12,7 +12,7 @@
 
     <nav>
         <a href="/">Home</a>
-        <a href="#">item 2</a>
+        <a href="/events">events</a>
         <a href="#">item 3</a>
         <a href="#">item 4</a>
     </nav>
@@ -22,7 +22,7 @@
     </main>
     
     <footer>
-        &copy; <?= date('Y'); ?> - BrandName
+        &copy; <?= date('Y'); ?> - Matthias Cecchi
     </footer>
 </body>
 </html>

@@ -49,6 +49,8 @@ class EventController extends BaseController {
         $event = new Event();
         $event->title = $_POST['title'];
         $event->location = $_POST['location'];
+        $event->datum = $_POST['datum'];
+        $event->organisator_id = $_POST['organisator_id'];
         $success = $event->save();
         //print_r($event);
 
@@ -58,5 +60,25 @@ class EventController extends BaseController {
             echo 'Er is iets misgegaan';
         }
         
+    }
+
+    public static function edit ($id) {
+        $event = Event::find($id);
+        self::loadView('/edit', [
+            'event' => $event
+        ]);
+    }
+
+    public static function update ($id) {
+        $event = Event::find($id);
+        $event->title = $_POST['title'];
+        $event->location = $_POST['location'];
+        $event->datum = $_POST['datum'];
+        $success = $event->edit($id);
+        if ($success) {
+            self::redirect('/events');
+        } else {
+            echo 'Er is iets misgegaan';
+        }
     }
 }  

@@ -8,3 +8,6 @@ $router->get('/events/delete/(\d+)','EventController@delete');
 $router->get('/events/detail/(\d+)','EventController@detail');
 $router->get('/events/add','EventController@add');
 $router->post('/events/add','EventController@save');
+
+$router->get('/events/edit/(\d+)', 'EventController@edit');
+$router->post('/events/edit/(\d+)', 'EventController@update');

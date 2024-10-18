@@ -15,5 +15,6 @@
         <p><?= $event->datum; ?></p>
         <p><?= $event->naam; ?></p>
         <a href="/events/delete/<?= $event->id; ?>">delete</a></a>
+        <a href="/events/edit/<?= $event->id; ?>">edit</a>
     </div>
 <?php endforeach; ?>

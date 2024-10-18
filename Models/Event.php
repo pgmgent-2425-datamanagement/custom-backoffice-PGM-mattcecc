@@ -20,14 +20,27 @@ class Event extends BaseModel
     }
 
     public function save(){
-        $sql = "INSERT INTO events (title, location ) VALUES (:title, :location)"; 
+        $sql = "INSERT INTO events (title, location, datum, organisator_id ) VALUES (:title, :location, :datum ,:organisator_id)"; 
         
         $pdo_statement = $this->db->prepare($sql);
         $success = $pdo_statement->execute([
             ':title' => $this->title,
             ':location' => $this->location,
+            ':datum' => $this->datum,
+            ':organisator_id' => 1,
         ]);
         return $success;
         }
         
+        public function edit($id){
+            $sql = "UPDATE events SET title = :title, location = :location, datum = :datum WHERE id = :id";
+            $pdo_statement = $this->db->prepare($sql);
+            $success = $pdo_statement->execute([
+                ':title' => $this->title,
+                ':location' => $this->location,
+                ':datum' => $this->datum,
+                ':id' => $id
+            ]);
+            return $success;
+        }
 }

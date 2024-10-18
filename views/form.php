@@ -13,6 +13,12 @@
         <textarea name="location" rows="6"></textarea>
     </label>
     </p>
+    <p>
+        <label>
+            datum
+        <input type="date" name="datum" value="">
+    </label>
+    </p>
     
     <input type="submit" value="opslaan">
 </form>

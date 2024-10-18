@@ -13,7 +13,7 @@
     <nav>
         <a href="/">Home</a>
         <a href="/events">events</a>
-        <a href="#">item 3</a>
+        <a href="/events/add">add</a>
         <a href="#">item 4</a>
     </nav>
 

@@ -9,3 +9,24 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.event {
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    margin: 20px 0; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.event h2 {
+    font-size: 24px; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+.event p {
+    font-size: 16px; 
+    color: #666; 
+    margin: 5px 0; 
+}

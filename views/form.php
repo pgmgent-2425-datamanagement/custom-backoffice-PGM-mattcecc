@@ -4,19 +4,19 @@
     <p>
         <label>
             title
-        <input type="text" name="title" placeholder="naam evenement" value="">
+        <input type="text" name="title" placeholder="naam evenement" value="" required>
     </label>
     </p>
     <p>
         <label>
             Location
-        <textarea name="location" rows="6"></textarea>
+        <textarea name="location" rows="6" required></textarea>
     </label>
     </p>
     <p>
         <label>
             datum
-        <input type="date" name="datum" value="">
+        <input type="date" name="datum" value="" required>
     </label>
     </p>
     

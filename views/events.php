@@ -6,11 +6,14 @@
     </label>
     <input type="submit" value="zoeken">
 </form>
-
-<?php foreach($events as $event): ?>
+<?php
+//print_r($events[0]);
+?>
+<?php foreach($events as $event):?>
     <div class="event">
         <a href="/events/detail/<?= $event->id; ?>">
         <h2><?= $event->title; ?></h2>
+        <img src="/images/<?= $event->image; ?>" alt="<?= $event->title; ?>">
         <p><?= $event->location; ?></p>
         <p><?= $event->datum; ?></p>
         <p><?= $event->naam; ?></p>

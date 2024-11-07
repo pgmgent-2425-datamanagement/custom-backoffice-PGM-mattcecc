@@ -12,8 +12,8 @@ class Home extends BaseModel{
 
     $pdo_statement = $db->prepare($sql);  
     $pdo_statement->execute(); 
-    $db_items = $pdo_statement->fetchAll(\PDO::FETCH_OBJ);
-    return $db_items;
+    $db_items = $pdo_statement->fetchAll(PDO::FETCH_OBJ);
+    return self::castToModel($db_items);
     }
     
 }

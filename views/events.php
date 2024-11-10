@@ -17,7 +17,7 @@
         <p><?= $event->location; ?></p>
         <p><?= $event->datum; ?></p>
         <p><?= $event->naam; ?></p>
-        <a href="/events/delete/<?= $event->id; ?>">delete</a></a>
-        <a href="/events/edit/<?= $event->id; ?>">edit</a>
+        <button><a href="/events/delete/<?= $event->id; ?>"style="color: red;">delete</a></button>
+        <button><a href="/events/edit/<?= $event->id; ?>" style="color: green;">edit</a></button>
     </div>
 <?php endforeach; ?>

@@ -15,3 +15,7 @@ $router->post('/events/add','EventController@save');
 
 $router->get('/events/edit/(\d+)', 'EventController@edit');
 $router->post('/events/edit/(\d+)', 'EventController@update');
+
+$router->get('/filemanager', 'FileManagerController@list');
+$router->get('/filemanager/(.*)', 'FileManagerController@list');
+$router->get('/filemanager/delete/(.*)', 'FileManagerController@delete');

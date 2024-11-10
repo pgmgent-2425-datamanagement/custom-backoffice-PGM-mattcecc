@@ -4,6 +4,7 @@ body {
     padding: 1rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
+
 }
 img {
     max-width: 100%;
@@ -30,3 +31,36 @@ img {
     color: #666; 
     margin: 5px 0; 
 }
+
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+li a {
+    text-decoration: none;
+    color: #333;
+}
+li img {
+    max-width: 100px;
+    display: block;
+    margin: 10px 0;
+}
+li p {
+    margin: 0;
+}
+
+

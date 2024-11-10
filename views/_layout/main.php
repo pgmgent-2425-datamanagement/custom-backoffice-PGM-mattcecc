@@ -14,6 +14,7 @@
         <a href="/">Home</a>
         <a href="/events">events</a>
         <a href="/events/add">aanmaken</a>
+        <a href="/filemanager">filemanager</a>
     </nav>
 
     <main>

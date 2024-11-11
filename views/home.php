@@ -8,8 +8,13 @@ foreach($table as $row):?>
     <p><?=$row->naam?> heeft <?=$row->userEvents?> evenement </p>
 </div>
 <?php endforeach;?>
-<div style="width: 500px;">
-<canvas id="acquisitions"></canvas>
+<div style="display: flex; justify-content: space-around; width: 100%;">
+    <div style="width: 45%;">
+        <canvas id="acquisitions"></canvas>
+    </div>
+    <div style="width: 45%;">
+        <canvas id="acquisitions-doughnut"></canvas>
+    </div>
 </div>
 
 <?php
@@ -44,4 +49,19 @@ $amounts = json_encode($amounts);
             }
         }
     );
+new Chart(
+    document.getElementById('acquisitions-doughnut'),
+    {
+        type: 'doughnut',
+        data: {
+            labels: names,
+            datasets: [
+                {
+                    label: 'User Events',
+                    data: amounts
+                }
+            ]
+        }
+    }
+);
 </script>

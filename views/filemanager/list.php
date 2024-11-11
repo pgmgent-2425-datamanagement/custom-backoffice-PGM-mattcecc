@@ -1,17 +1,21 @@
-<h1>filemanager</h1>
+<h1>File Manager</h1>
 
-<?php foreach ($list as $item):
-    if ($item != '.' && $item != '..'):
-        if (is_dir(BASE_DIR . '/public/images/' . $item)): ?>
-            <li><a href="/filemanager/<?= $item; ?>"><?= $item; ?></a>
-        </li>
-        <?php else: ?>
-        <li>
-            <p><?= $item ?> </p>
-            <img src="/images/<?= $item; ?>" alt="">
-            <button><a href="/filemanager/delete/<?= $item; ?>" style="color: red;">delete</a></button>
-           
-        </li>
-<?php endif;
-    endif;
-endforeach; ?>
+<?php 
+// Check if $list is a valid array before looping through it
+if (is_array($list) && !empty($list)): 
+    foreach ($list as $item):
+        // Skip '.' and '..' entries
+        if ($item != '.' && $item != '..'): ?>
+            <li>
+                <p><?= htmlspecialchars($item) ?></p>
+                <img src="/images/<?= htmlspecialchars($item); ?>" alt="">
+                <button>
+                    <a href="/filemanager/delete/<?= urlencode($item); ?>" style="color: red;">Delete</a>
+                </button>
+            </li>
+        <?php 
+        endif;
+    endforeach; 
+else: ?>
+    <p>No files found in this directory.</p>
+<?php endif; ?>

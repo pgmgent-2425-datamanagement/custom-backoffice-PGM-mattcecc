@@ -12,7 +12,7 @@ foreach($table as $row):?>
     <div style="width: 45%;">
         <canvas id="acquisitions"></canvas>
     </div>
-    <div style="width: 45%;">
+    <div style="width: 35%;">
         <canvas id="acquisitions-doughnut"></canvas>
     </div>
 </div>

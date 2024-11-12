@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/main.css?v=<?php if( $_ENV['DEV_MODE'] == "true" ) { echo time(); }; ?>">
 </head>
 <body>
-    <div class="brand">BrandName</div>
+    <div class="brand">Custom backoffice</div>
 
     <nav>
         <a href="/">Home</a>

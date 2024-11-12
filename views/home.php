@@ -1,5 +1,5 @@
-<h1>Base MVC</h1>
-<p>Welcome to this base mvc project.</p>
+<h1>Custom backoffice</h1>
+<p>Welcome to this Custom backoffice project.</p>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <?php
